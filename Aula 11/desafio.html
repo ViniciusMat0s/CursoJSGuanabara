@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are U gringo?</title>
+</head>
+<body>
+    <h1>Verificador de gringo</h1>
+    País de origem: <input type="text" name="origem" id="origem">
+    <input type="button" value="Verificar" onclick="resultado()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function resultado() {
+            var og = window.document.querySelector('input#origem')
+            var res = window.document.querySelector('div#res')
+            var ogg = String(og)
+            res.innerHTML = `<p>Sua origem é <strong>${og}</strong>.</p>`
+            if (ogg == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>brasileiro</strong>.</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>gringo</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
